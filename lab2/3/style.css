@@ -1,0 +1,66 @@
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+table, th, td {
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+  }
+
+td, th {
+    padding: 10px
+}
+
+
+
+tr:nth-child(even) {
+    background-color: #cfcfcf90;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+th {
+    background: #8bdeff !important;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    gap: 10px;
+    width: 512px;
+    height: 100%;
+}
+
+.bar {
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px #dfdfdf;
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+@media only screen and (max-width: 600px) {
+    .chart {
+        width: 100vw;
+  }
+}

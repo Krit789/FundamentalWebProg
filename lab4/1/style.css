@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+}
+
+#result-hist {
+  height: 256px;
+  width: 300px;
+  overflow-y: auto;
+  background: lightcyan;
+  border-radius: 8px;
+  padding: 12px;
+}

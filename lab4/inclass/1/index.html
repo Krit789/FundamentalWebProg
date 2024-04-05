@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="p1">This is paragraph</p>
+    <div id="mydiv"></div>
+    <script>
+        function addNode() {
+            const element = document.createElement('p1');
+            const textNode = document.createTextNode('This is a new node');
+            element.appendChild(textNode);
+
+            document.getElementById('mydiv').appendChild(element);
+        }
+        addNode()
+    </script> -->
+
+    <!-- <script>
+        let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        let olElement = document.createElement("ol");
+        olElement.setAttribute('id', 'olElem')
+        days.forEach(val => {
+            let liElem = document.createElement('li')
+            liElem.innerText = `${val}`
+            olElement.appendChild(liElem);
+        })
+        document.body.appendChild(olElement)
+    </script> -->
+
+    <div id="div1">
+        <p id="p1">JavaScript</p>
+        <p id="p2">Python</p>
+        <p id="p3">TypeScript</p>
+        <!-- add a new element here -->
+    </div>
+    <hr>
+    <div id="div2">
+        <p>My favourite fruit.</p>
+    </div>
+
+
+    <button type="button" onclick="addNode()">Add Node</button>
+    <button type="button" onclick="deleteNode()">Delete Node</button>
+    <button type="button" onclick="addNewImage()">Add Image</button>
+    <script>
+        function addNode() {
+            let ptag = document.createElement('p')
+            ptag.appendChild(document.createTextNode('A new paragraph'))
+            document.getElementById('div1').appendChild(ptag)
+        }
+
+        function deleteNode() {
+            const parent = document.getElementById('div1')
+            parent.removeChild(parent.children[0])
+        }
+
+        function addNewImage() {
+            let imgtag = document.createElement("img");
+
+            let srcAttr = document.createAttribute("src");
+            srcAttr.value ="http://10.0.15.21/lab/lab4/apples.jpg";           
+            imgtag.setAttributeNode(srcAttr);
+            imgtag.setAttribute('width', '512')
+            document.getElementById('div2').appendChild(imgtag);                                 
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px;
+  /* Should be removed. Only for demonstration */
+}
+
+.address {
+    width: 200px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+img {
+    height: 100%
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

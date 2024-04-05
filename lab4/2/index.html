@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Form</title>
+    <style>
+        body {
+            font-family: 'roboto';
+        }
+    </style>
+    <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="container mt-5">
+        <h1>Bilingual Form</h1>
+        <div id="name" class="mb-3">
+            <label id="nameLabel" for="nameInput">ชื่อ</label><br />
+            <input class="form-control" type="text" id="nameInput" />
+        </div>
+        <div id="surname" class="mb-3">
+            <label id="surnameLabel" for="surnameInput">นามสกุล</label><br />
+            <input class="form-control" type="text" id="surnameInput" />
+        </div>
+        <div id="country" class="mb-3">
+            <label id="countryLabel" for="selectInput">ประเทศ</label><br />
+            <select class="form-select" id="selectInput">
+                <option value="0" disabled selected="selected">เลือกประเทศ</option>
+                <option value="1">ไทย</option>
+                <option value="2">เวียดนาม</option>
+                <option value="3">ลาว</option>
+                <option value="4">มาเลย์เซีย</option>
+                <option value="5">สิงคโปร์</option>
+                <option value="6">ฟิลิปปินส์</option>
+                <option value="7">เมียนมาร์</option>
+                <option value="8">กัมพูชา</option>
+                <option value="9">บรูไน</option>
+                <option value="10">อินโดนีเซีย</option>
+            </select>
+        </div>
+        <button id="switchLang" type="submit" class="btn btn-primary">เปลี่ยนเป็นภาษาอังกฤษ</button>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+    font-family: "Chakra Petch", sans-serif;
+  }
+
+.container-content {
+    display: flex;
+    /* width: fit-content; */
+    max-width: 512px;
+    padding: 0 8px;
+    margin: 0 auto;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, tr, td, th {
+    border: none;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background: #f0f0f0;
+}
+
+th {
+    background: #3acdfa;
+}

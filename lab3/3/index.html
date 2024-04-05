@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <link href="http://10.0.15.21/lab/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container my-4">
+        <h1><b>Dynamic Chart</b></h1>
+        <div class="row">
+            <div class="col-lg-12 col-xl-6">
+                <div class="chart">
+                    <div class="bar" id="bar-1"
+                        style="background: linear-gradient(90deg, rgba(246,255,37,0) 0%, rgba(255,119,0,1) 86%);">
+                        <span id="c-label-1" style="margin-left: 6px;">COOS</span>
+                    </div>
+                    <div class="bar" id="bar-2"
+                        style="background: linear-gradient(90deg, rgba(37,255,40,0) 0%, rgba(63,149,0,1) 86%)">
+                        <span id="c-label-2" style="margin-left: 6px;">FWD</span>
+                    </div>
+                    <div class="bar" id="bar-3"
+                        style="background: linear-gradient(90deg, rgba(37,195,255,0) 0%, rgba(0,96,149,1) 86%);">
+                        <span id="c-label-3" style="margin-left: 6px;">ICN</span>
+                    </div>
+                    <div class="bar" id="bar-4"
+                        style="background: linear-gradient(90deg, rgba(255,37,217,0) 0%, rgba(149,0,108,1) 86%);">
+                        <span id="c-label-4" style="margin-left: 6px;">ISAS</span>
+                    </div>
+                    <div class="bar" id="bar-5"
+                        style="background: linear-gradient(90deg, rgba(255,37,37,0) 0%, rgba(70,0,149,1) 86%);">
+                        <span id="c-label-5" style="margin-left: 6px;">SE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Value (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><input type="text" id="label-1" class="form-control" placeholder="Name"
+                                    onchange="updateChart()" value="COOS">
+                            </td>
+                            <td><input type="number" id="val-1" class="form-control" placeholder="100"
+                                    onchange="updateChart()" value="50"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><input type="text" id="label-2" class="form-control" placeholder="Name"
+                                    onchange="updateChart()" value="FWD">
+                            </td>
+                            <td><input type="number" id="val-2" class="form-control" placeholder="100"
+                                    onchange="updateChart()" value="70"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><input type="text" id="label-3" class="form-control" placeholder="Name"
+                                    onchange="updateChart()" value="ICN">
+                            </td>
+                            <td><input type="number" id="val-3" class="form-control" placeholder="100"
+                                    onchange="updateChart()" value="80"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td><input type="text" id="label-4" class="form-control" placeholder="Name"
+                                    onchange="updateChart()" value="ISAS">
+                            </td>
+                            <td><input type="number" id="val-4" class="form-control" placeholder="100"
+                                    onchange="updateChart()" value="10"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td><input type="text" id="label-5" class="form-control" placeholder="Name"
+                                    onchange="updateChart()" value="SE"></td>
+                            <td><input type="number" id="val-5" class="form-control" placeholder="100"
+                                    onchange="updateChart()" value="40"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" onclick="showChart(); hasShown = true">View Chart</button>
+                <button class="btn btn-danger ms-2" onclick="resetChart(); hasShown = false">Reset</button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let hasShown;
+
+        function updateChart() {
+            if (!hasShown) return
+            showChart()
+        }
+
+        function showChart() {
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`bar-${i}`).style.width = `${document.getElementById(`val-${i}`).value}%`
+                document.getElementById(`c-label-${i}`).innerText = document.getElementById(`label-${i}`).value
+            }
+        }
+
+        function resetChart() {
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`bar-${i}`).style.width = '0.5%'
+                document.getElementById(`c-label-${i}`).innerText = `label${i}`
+            }
+        }
+    </script>
+    <script src="http://10.0.15.21/lab/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

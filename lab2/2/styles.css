@@ -1,0 +1,41 @@
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1002px;
+}
+
+.item {
+    background: black;
+    border-radius: 12px;
+    width: 326px;
+    height: 230px;
+}
+
+.img-container-space {
+    margin: 0 25px 25px 25px;
+}
+
+.img-container img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.card-title {
+    display: inline-block;
+    margin-left: 25px;
+    padding-top: 12px;
+    font-size: xx-large;
+    color: white;
+}
+
+img {
+    width: 100%;
+}

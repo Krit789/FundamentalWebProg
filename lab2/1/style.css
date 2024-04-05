@@ -1,0 +1,39 @@
+body {
+    font-family: 'Single Day';
+}
+
+.title {
+    font-size: 3em;
+    text-align: center;
+}
+
+.tl-title {
+    font-size: 1.5em;
+}
+
+.picture {
+    background: white;
+    padding: 10px 20px;
+    margin: 30px;
+    width: fit-content;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.timeline {
+    margin: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    padding-top: 25px;
+    background: lightgray;
+
+}

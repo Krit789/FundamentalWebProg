@@ -1,0 +1,21 @@
+body {
+    font-family: "Chakra Petch", sans-serif;
+  }
+
+.container {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+td, tr {
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
